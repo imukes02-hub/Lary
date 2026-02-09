@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Love, Lara ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; background-color: #1a0005; color: white; overflow-x: hidden; scroll-behavior: smooth; }
+        
+        /* Particle Background */
+        #particles-js { position: fixed; width: 100%; height: 100%; z-index: 1; pointer-events: none; }
+
+        /* Music Button */
+        .music-ctrl { position: fixed; top: 20px; right: 20px; z-index: 100; background: #ff4d6d; border: none; padding: 10px 15px; border-radius: 50px; color: white; cursor: pointer; font-weight: bold; box-shadow: 0 0 15px rgba(255, 77, 109, 0.5); }
+
+        .day-section {
+            height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;
+            position: relative; z-index: 2; padding: 20px;
+            background: radial-gradient(circle, rgba(131,20,38,0.4) 0%, rgba(26,0,5,1) 100%);
+        }
+
+        .date-badge { font-size: 5rem; font-weight: 800; opacity: 0.1; position: absolute; top: 10%; left: 5%; color: #ff4d6d; }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(15px);
+            padding: 40px; border-radius: 30px; text-align: center; max-width: 600px;
+            border: 1px solid rgba(255, 255, 255, 0.1); transform: translateY(50px); opacity: 0; transition: all 1s ease-out;
+        }
+
+        .day-section.active .content-card { transform: translateY(0); opacity: 1; }
+
+        .photo-frame {
+            width: 220px; height: 220px; border-radius: 50%; border: 5px solid #ff4d6d;
+            margin: 0 auto 20px; overflow: hidden; box-shadow: 0 0 20px #ff4d6d;
+        }
+        .photo-frame img { width: 100%; height: 100%; object-fit: cover; }
+
+        h1 { font-family: 'Dancing Script', cursive; font-size: 2.8rem; color: #ff4d6d; margin-bottom: 10px; }
+        .shayari { font-size: 1.2rem; line-height: 1.6; font-style: italic; color: #ffccd5; }
+        
+        .footer-note { font-size: 0.9rem; margin-top: 15px; color: white; opacity: 0.8; }
+    </style>
+</head>
+<body>
+
+    <audio id="bgMusic" loop>
+        <source src="Tere Bin Simmba 128 Kbps.mp3" type="audio/mpeg">
+    </audio>
+    <button class="music-ctrl" onclick="toggleMusic()">🎵 Play Music</button>
+
+    <div id="particles-js"></div>
+
+    <section class="day-section active">
+        <div class="date-badge">07</div>
+        <div class="content-card">
+            <div class="photo-frame"><img src="Lara_rose.png" alt="Lara Rose Day"></div>
+            <h1>Rose Day, Lara</h1>
+            <p class="shayari">"Phoolon se haseen muskurahat hai tumhari,<br>Lara, tumse hi milti hai har khushi hamari."</p>
+        </div>
+    </section>
+
+    <section class="day-section">
+        <div class="date-badge">08</div>
+        <div class="content-card">
+            <div class="photo-frame"><img src="Lara_propose.png" alt="Lara Propose Day"></div>
+            <h1>Propose Day, Lara</h1>
+            <p class="shayari">"Dhadkano ko ab ek hi naam ki pyaas hai,<br>Lara, tumhaara saath mere liye sabse khaas hai."</p>
+        </div>
+    </section>
+
+    <section class="day-section">
+        <div class="date-badge">09</div>
+        <div class="content-card">
+            <div class="photo-frame"><img src="Lara_chocolate.png" alt="Lara Chocolate Day"></div>
+            <h1>Chocolate Day, Lara</h1>
+            <p class="shayari">"Chocolate ki mithaas toh bas ek bahana hai,<br>Mujhe toh Lara ke sang poora jeevan bitana hai."</p>
+        </div>
+    </section>
+
+    <section class="day-section">
+        <div class="date-badge">10</div>
+        <div class="content-card">
+            <div class="photo-frame"><img src="Lara_teddy.png" alt="Lara Teddy Day"></div>
+            <h1>Teddy Day, Lara</h1>
+            <p class="shayari">"Ek pyara sa Teddy Lara ke liye bheja hai,<br>Ise dekhna tab jab dil ne humein khoja hai."</p>
+        </div>
+    </section>
+
+    <section class="day-section">
+        <div class="date-badge">11</div>
+        <div class="content-card">
+            <div class="photo-frame"><img src="Lara_promise.jpg" alt="Lara Promise Day"></div>
+            <h1>Promise Day, Lara</h1>
+            <p class="shayari">"Har mod par Lara, tumhara saath nibhayenge,<br>Ye waada hai ki tumko kabhi na rulayenge."</p>
+        </div>
+    </section>
+
+    <section class="day-section">
+        <div class="date-badge">12</div>
+        <div class="content-card">
+            <div class="photo-frame"><img src="Lara_hug.png" alt="Lara Hug Day"></div>
+            <h1>Hug Day, Lara</h1>
+            <p class="shayari">"Bahon mein lekar Lara, saare gham bhula denge,<br>Tumhe duniya ki har ek khushi dila denge."</p>
+        </div>
+    </section>
+
+    <section class="day-section">
+        <div class="date-badge">13</div>
+        <div class="content-card">
+            <div class="photo-frame"><img src="Lara_kiss.jpg" alt="Lara Kiss Day"></div>
+            <h1>Kiss Day, Lara</h1>
+            <p class="shayari">"Khamoshi se dilon ki baat ho jayegi,<br>Lara, tumse hi meri har subah-shaam ho jayegi."</p>
+        </div>
+    </section>
+
+    <section class="day-section">
+        <div class="date-badge">14</div>
+        <div class="content-card">
+            <div class="photo-frame"><img src="Lara_main.png" alt="Lara Valentine Day"></div>
+            <h1>Happy Valentine's, Lara</h1>
+            <p class="shayari">"Tu hi mera kal hai, tu hi mera aaj hai,<br>Lara, mere dil par sirf tera hi raaj hai."</p>
+            <p class="footer-note">I Love You Forever ❤️</p>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        // Particle Effect (Flowers/Glitter)
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 100 },
+                "color": { "value": "#ff4d6d" },
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.6, "random": true },
+                "size": { "value": 4, "random": true },
+                "move": { "enable": true, "speed": 2, "direction": "bottom" }
+            }
+        });
+
+        // Music Toggle Function
+        function toggleMusic() {
+            var audio = document.getElementById("bgMusic");
+            var btn = document.querySelector(".music-ctrl");
+            if (audio.paused) {
+                audio.play();
+                btn.innerHTML = "⏸ Pause Music";
+            } else {
+                audio.pause();
+                btn.innerHTML = "🎵 Play Music";
+            }
+        }
+
+        // Scroll Observer for Animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.day-section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
